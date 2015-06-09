@@ -1,0 +1,43 @@
+18 C - Sums of Digits
+6 SINGLE
+8 STANDARD
+-1
+8 STANDARD
+-1
+2
+0
+8 3
+1
+2
+3
+
+6 1
+2
+3
+
+1
+1
+8 3
+3
+2
+1
+
+9 3
+11
+100
+
+1
+16 main/net/rsalesc
+8 -Xmx256M
+4 Main
+17 net.rsalesc.TaskC
+39 net.egork.chelper.checkers.TokenChecker
+0 
+0
+10 2015.01.31
+46 Codeforces Round #289 (Div. 2, ACM ICPC Rules)
+1
+24 net.rsalesc.io.FastInput
+25 net.rsalesc.io.FastOutput
+0
+0

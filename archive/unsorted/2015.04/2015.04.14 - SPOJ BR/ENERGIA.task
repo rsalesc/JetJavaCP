@@ -1,0 +1,43 @@
+7 ENERGIA
+9 MULTI_EOF
+8 STANDARD
+9 input.txt
+8 STANDARD
+10 output.txt
+1
+0
+52 6 7
+1 2
+2 3
+3 4
+4 5
+5 6
+6 2
+1 5
+4 3
+1 2
+4 2
+1 4
+0 0
+
+30 Teste 1
+normal
+
+Teste 2
+falha
+
+1
+16 main/net/rsalesc
+16 -Xmx256m -Xss64m
+4 Main
+19 net.rsalesc.ENERGIA
+39 net.egork.chelper.checkers.TokenChecker
+0 
+0
+10 2015.04.14
+7 SPOJ BR
+0
+24 net.rsalesc.io.FastInput
+25 net.rsalesc.io.FastOutput
+0
+0

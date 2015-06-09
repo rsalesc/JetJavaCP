@@ -1,0 +1,40 @@
+12 C - Dijkstra
+12 MULTI_NUMBER
+12 LOCAL_REGEXP
+22 C-(small|large).*[.]in
+6 CUSTOM
+5 c.out
+1
+0
+42 5
+2 1
+ik
+3 1
+ijk
+3 1
+kji
+2 6
+ji
+1 10000
+i
+
+61 Case #1: NO
+Case #2: YES
+Case #3: NO
+Case #4: YES
+Case #5: NO
+1
+16 main/net/rsalesc
+8 -Xmx512M
+4 Main
+17 net.rsalesc.TaskC
+39 net.egork.chelper.checkers.TokenChecker
+0 
+0
+10 2015.04.11
+40 Google Code Jam Qualification Round 2015
+0
+24 net.rsalesc.io.FastInput
+25 net.rsalesc.io.FastOutput
+1
+0

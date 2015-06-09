@@ -1,0 +1,35 @@
+22 D - Andrey and Problem
+6 SINGLE
+8 STANDARD
+-1
+8 STANDARD
+-1
+2
+0
+18 4
+0.1 0.2 0.3 0.8
+
+15 0.800000000000
+
+1
+1
+10 2
+0.1 0.2
+
+15 0.260000000000
+
+1
+16 main/net/rsalesc
+8 -Xmx256M
+4 Main
+17 net.rsalesc.TaskD
+39 net.egork.chelper.checkers.TokenChecker
+0 
+0
+10 2015.03.23
+30 Codeforces Round #253 (Div. 2)
+1
+24 net.rsalesc.io.FastInput
+25 net.rsalesc.io.FastOutput
+0
+0

@@ -1,0 +1,39 @@
+5 Candy
+6 SINGLE
+8 STANDARD
+9 input.txt
+8 STANDARD
+10 output.txt
+1
+0
+65 3
+15 33 21
+2
+1 1
+2
+2 2
+2
+3 3
+3
+1000000000 1000000000 1000000000
+0
+17 4
+0
+0
+1
+832519396
+1
+16 main/net/rsalesc
+16 -Xmx256m -Xss64m
+4 Main
+17 net.rsalesc.Candy
+39 net.egork.chelper.checkers.TokenChecker
+0 
+0
+10 2015.03.22
+13 Nacional 2011
+1
+24 net.rsalesc.io.FastInput
+25 net.rsalesc.io.FastOutput
+0
+0
