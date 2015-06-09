@@ -35,6 +35,10 @@ public class FastOutput {
             printLine(m[i]);
     }
 
+    public void printf(String format, Object...args){
+        writer.printf(format, args);
+    }
+
     public void close(){
         writer.close();
     }

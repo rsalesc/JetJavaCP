@@ -24,6 +24,10 @@ public class FastInput{
         return tokenizer.nextToken();
     }
 
+    public String next(){
+        return read();
+    }
+
     public int readInt(){
         return Integer.parseInt(read());
     }
@@ -61,5 +65,10 @@ public class FastInput{
         for(int i = 0; i < array.length; i++)
             for(int j = 0; j < array[0].length; j++)
                 array[i][j] = readBool();
+    }
+
+    public void readStringArray(String[] array){
+        for(int i = 0; i < array.length; i++)
+            array[i] = readString();
     }
 }
