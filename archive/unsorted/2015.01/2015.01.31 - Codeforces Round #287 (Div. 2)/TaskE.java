@@ -2,8 +2,8 @@ package net.rsalesc;
 
 import net.rsalesc.io.FastInput;
 import net.rsalesc.io.FastOutput;
-import net.rsalesc.util.Pair;
-import net.rsalesc.util.PairII;
+import net.rsalesc.lib.util.pair.Pair;
+import net.rsalesc.lib.util.pair.IntPair;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -21,8 +21,8 @@ public class TaskE {
             this.z = z;
         }
     }
-    class PQPair extends Pair<PairII, Integer> {
-        public PQPair(PairII first, Integer second){
+    class PQPair extends Pair<IntPair, Integer> {
+        public PQPair(IntPair first, Integer second){
             super(first, second);
         }
     }
@@ -60,7 +60,7 @@ public class TaskE {
         dist[1] = 0;
         broken[1] = 0;
         PriorityQueue<PQPair> pq = new PriorityQueue<PQPair>();
-        pq.add(new PQPair(new PairII(0, 0), 1));
+        pq.add(new PQPair(new IntPair(0, 0), 1));
         while(!pq.isEmpty()){
             PQPair i = pq.poll();
             for(int j = 0; j < adj[i.second].size(); j++){
@@ -70,7 +70,7 @@ public class TaskE {
                     dist[e.y] = i.first.first+1;
                     broken[e.y] = i.first.second+c;
                     from[e.y] = e.id;
-                    if(adj[e.y] != null) pq.add(new PQPair(new PairII(dist[e.y], broken[e.y]), e.y));
+                    if(adj[e.y] != null) pq.add(new PQPair(new IntPair(dist[e.y], broken[e.y]), e.y));
                 }
             }
         }

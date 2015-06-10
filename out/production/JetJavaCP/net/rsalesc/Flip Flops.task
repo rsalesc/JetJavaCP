@@ -1,0 +1,37 @@
+10 Flip Flops
+12 MULTI_NUMBER
+8 STANDARD
+-1
+8 STANDARD
+-1
+1
+0
+41 5
+
+XXXX
+
+YYYYY
+
+XYXYXYXY
+
+YXYXYX
+
+XXXYYY
+
+1 
+
+1
+16 main/net/rsalesc
+7 -Xmx64M
+4 Main
+21 net.rsalesc.FlipFlops
+39 net.egork.chelper.checkers.TokenChecker
+0 
+0
+10 2015.06.10
+9 Codex_1.0
+1
+24 net.rsalesc.io.FastInput
+25 net.rsalesc.io.FastOutput
+0
+1

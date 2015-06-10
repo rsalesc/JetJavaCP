@@ -2,7 +2,7 @@ package net.rsalesc;
 
 import net.rsalesc.io.FastInput;
 import net.rsalesc.io.FastOutput;
-import net.rsalesc.util.MaxPriorityQueue;
+import net.rsalesc.lib.structures.priorityqueue.MaxPriorityQueue;
 
 public class TaskD {
     public void solve(int testNumber, FastInput in, FastOutput out) {

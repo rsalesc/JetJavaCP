@@ -2,7 +2,7 @@ package net.rsalesc;
 
 import net.rsalesc.io.FastInput;
 import net.rsalesc.io.FastOutput;
-import net.rsalesc.util.Pair;
+import net.rsalesc.lib.util.pair.Pair;
 
 import java.util.Arrays;
 import java.util.PriorityQueue;

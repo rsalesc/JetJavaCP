@@ -2,8 +2,8 @@ package net.rsalesc;
 
 import net.rsalesc.io.FastInput;
 import net.rsalesc.io.FastOutput;
-import net.rsalesc.lib.strings.StringAlgos;
-import net.rsalesc.util.ArrayUtils;
+import net.rsalesc.lib.strings.StringAlgorithms;
+import net.rsalesc.lib.util.ArrayUtils;
 
 public class TaskD {
     private static int M = (int)1e9+7;
@@ -16,10 +16,10 @@ public class TaskD {
         int m = t.length-1;
 
         int p[] = new int[m+1];
-        StringAlgos.prefixFunction(t, m, p);
+        StringAlgorithms.prefixFunction(t, m, p);
 
         int kmp[] = new int[n+1];
-        StringAlgos.kmp(t, s, n, p, kmp);
+        StringAlgorithms.kmp(t, s, n, p, kmp);
 
         int dp[] = new int[n+1];
         int sum[]= new int[n+1];
