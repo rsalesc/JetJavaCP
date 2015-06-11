@@ -3,46 +3,32 @@ package net.rsalesc.lib.graphs;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
-import java.util.List;
 
 /**
  * Created by rsalesc on 15/04/15.
  */
 public class SCC {
 
-    protected int begin, end;
-    protected List<GraphEdge> adj[], trans[];
+    protected Graph graph;
     protected boolean visited[];
     protected LinkedList<Integer> sccStack;
     protected ArrayList<Integer> comp;
     protected ArrayList< ArrayList<Integer> > comps;
 
-    public SCC(int begin, int end, List<GraphEdge> adj[]){
-        this.begin = begin;
-        this.end = end;
-        this.adj = adj;
+    public SCC(Graph graph){
+        this.graph = graph;
     }
 
     public ArrayList< ArrayList<Integer> > kosaraju(){
         sccStack = new LinkedList<Integer>();
-        visited = new boolean[end+1];
-        for(int i = begin; i <= end; i++){
+        visited = new boolean[graph.vertexCount()];
+        for(int i = 0; i < graph.vertexCount(); i++){
             if(!visited[i]) firstDfs(i);
         }
 
         comp = new ArrayList<Integer>();
         comps = new ArrayList< ArrayList<Integer> >(); // vetor com as componentes conexas
         Arrays.fill(visited, false);
-
-        // transponho o grafo
-        trans = new List[end+1];
-        for(int i = begin; i <= end; i++) trans[i] = new LinkedList<GraphEdge>();
-
-        for(int i = begin; i <= end; i++){
-            for(GraphEdge e : adj[i]){
-                trans[e.next].add(new GraphEdge(e.next, i));
-            }
-        }
 
         while(!sccStack.isEmpty()){
             int u = sccStack.poll();
@@ -59,11 +45,10 @@ public class SCC {
     protected void firstDfs(int u){
         visited[u] = true;
 
-        for(GraphEdge e : adj[u]){
-            int v = e.next;
-            if(!visited[v]){
+        for(Edge e = graph.firstEdge(u); e != null; e = e.next()){
+            int v = e.destination();
+            if(!visited[v])
                 firstDfs(v);
-            }
         }
 
         sccStack.push(u);
@@ -73,11 +58,10 @@ public class SCC {
         visited[u] = true;
         comp.add(u);
 
-        for (GraphEdge e : trans[u]) {
-            int v = e.next;
-            if (!visited[v]) {
+        for(Edge e = graph.firstTransposedEdge(u); e != null; e = e.next()){
+            int v = e.destination();
+            if(!visited[v])
                 secondDfs(v);
-            }
         }
     }
 }
