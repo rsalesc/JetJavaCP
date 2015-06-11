@@ -4,12 +4,20 @@
 -1
 8 STANDARD
 -1
-1
+2
 0
 9 1
 ax
 abcc
 -1
+1
+1
+17 2
+aa
+ab
+aaa
+aaaab
+0 
 1
 16 main/net/rsalesc
 7 -Xmx64M
