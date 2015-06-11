@@ -171,9 +171,59 @@ public class Graph {
         return edgeCount;
     }
 
+    public int firstOutbound(int vert){
+        return firstOut[vert];
+    }
+
+    public int nextOutbound(int id){
+        return nextOut[id];
+    }
+
+    public int firstInbound(int vert){
+        initInbound();
+        return firstIn[vert];
+    }
+
+    public int nextInbound(int id){
+        return nextIn[id];
+    }
+
+    public Edge firstEdge(int vert){
+        if(firstOut[vert] == -1) return null;
+        initEdges();
+        return edges[firstOut[vert]];
+    }
+
+    public Edge nextEdge(Edge edge){
+        if(nextOut[edge.id()] == -1) return null;
+        return edges[nextOut[edge.id()]];
+    }
+
+    public Edge firstTransposedEdge(int vert){
+        initInbound();
+        if(firstIn[vert] == -1) return null;
+        initEdges();
+        return new TransposedGraphEdge(firstIn[vert]);
+    }
+
+    public Edge nextTransposedGraphEdge(Edge edge){
+        if(nextIn[edge.id()] == -1) return null;
+        return new TransposedGraphEdge(nextIn[edge.id()]);
+    }
+
     public Edge edge(int id){
         initEdges();
         return edges[id];
+    }
+
+    public Edge edge(int u, int v){
+        initEdges();
+        int id = firstOut[u];
+        while(id != -1){
+            if(to[id] == v) return edges[id];
+            id = nextOut[id];
+        }
+        return null;
     }
 
     public class GraphEdge extends Edge{
@@ -181,6 +231,15 @@ public class Graph {
 
         public GraphEdge(int id){
             this.id = id;
+        }
+
+        public Edge next(){
+            if(nextOut[id] == -1) return null;
+            return edges[id];
+        }
+
+        public int id(){
+            return id;
         }
 
         public int source(){
@@ -221,6 +280,11 @@ public class Graph {
 
         public TransposedGraphEdge(int id){
             super(id);
+        }
+
+        public Edge next(){
+            if(nextIn[id] == -1) return null;
+            return new TransposedGraphEdge(nextIn[id]);
         }
 
         public int source(){
