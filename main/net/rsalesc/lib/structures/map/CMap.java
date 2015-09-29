@@ -7,9 +7,9 @@ import java.util.TreeMap;
  */
 public class CMap<K, V> extends TreeMap<K, V> {
 
-    public void set(K key, V value){
+    /*public void set(K key, V value){
         if(this.containsKey(key))
             this.replace(key, value);
         else this.put(key, value);
-    }
+    }*/
 }

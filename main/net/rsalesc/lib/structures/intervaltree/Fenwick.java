@@ -10,7 +10,7 @@ public class Fenwick {
         array = new long[size+1];
     }
 
-    protected long get(int idx){
+    public long get(int idx){
         long sum = 0;
         while(idx > 0){
             sum += array[idx];

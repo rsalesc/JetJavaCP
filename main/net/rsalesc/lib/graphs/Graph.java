@@ -455,6 +455,11 @@ public class Graph {
             id = firstValidEdge(next[id]);
             return edges[id];
         }
+
+        @Override
+        public void remove() {
+
+        }
     }
 
     public class TransposedEdgeIterator extends EdgeIterator{
